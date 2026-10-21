@@ -39,6 +39,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `eostudio/resources/sentinel/snapshot.json` — Public COG URLs, pinned radiometry, acquisition method, crop/STAC byte hashes and attribution.
 - `eostudio/server.py` — """Loopback-only, read-only HTTP application by Jason Stys; not an Internet server.
 - `launcher.py` — """Portable application entry point by Jason Stys; main and argv: docs/CODE_INDEX.md.
+- `licenses/PROJ.txt` — 
 - `licenses/PYTHON.txt` — A. HISTORY OF THE SOFTWARE
 - `package-lock.json` — Resolved npm dependency graph with download integrity values.
 - `package.json` — Pinned browser dependencies, Node version contract and build/test/audit scripts.

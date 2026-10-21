@@ -42,6 +42,8 @@ The recorded development benchmark measured approximately **753 ms median** with
 
 An early HTTP-test import alias shadowed `http.client`; the harness import was corrected rather than changing correct service behavior. The default image fit was adjusted after visual inspection to show the whole crop before zooming. No warning/coverage suppression was added to obtain a pass.
 
+Initial hosted packaging caught a platform-dependent notice layout: the Windows Rasterio wheel includes `proj_data/copyright`, whereas Linux/macOS wheels did not supply that same file path. The build now explicitly includes the upstream PROJ notice under `licenses/proj/PROJ.txt` on **every** OS and requires it in the frozen-app smoke test. The notice is retained in source from the locked distribution and agrees with upstream PROJ COPYING. This is a packaging/notice-layout correction, not a numerical-model defect or a waived license gate; the real WGS84 export smoke test still exercises the bundled projection runtime.
+
 ## Hosted and release evidence
 
 The [Validation workflow](https://github.com/JasonStys/earth-observation-change-studio/actions/workflows/validate.yml) defines eight jobs: four model OS/Python combinations, one three-browser integration job, and three actual portable-app jobs. [CodeQL](https://github.com/JasonStys/earth-observation-change-studio/actions/workflows/codeql.yml) analyzes Python and JavaScript/TypeScript. Successful analysis is not the same as zero findings, so open alerts are reviewed separately.

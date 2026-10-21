@@ -750,16 +750,16 @@ Line numbers refer to formatted source, not this generated document.
 | 21 | `variable command` |
 | 37 | `variable destination` |
 | 37 | `variable source` |
-| 47 | `variable pyinstaller` |
-| 48 | `variable notices` |
-| 50 | `variable path` |
-| 58 | `variable notice` |
-| 63 | `variable source` |
-| 71 | `variable executable` |
-| 79 | `variable slug` |
-| 82 | `variable archive` |
-| 87 | `variable stream` |
-| 88 | `variable digest` |
+| 48 | `variable pyinstaller` |
+| 49 | `variable notices` |
+| 51 | `variable path` |
+| 59 | `variable notice` |
+| 64 | `variable source` |
+| 72 | `variable executable` |
+| 80 | `variable slug` |
+| 83 | `variable archive` |
+| 88 | `variable stream` |
+| 89 | `variable digest` |
 
 ## tools/prepare_release.py
 

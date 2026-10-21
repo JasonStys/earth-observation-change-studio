@@ -39,6 +39,7 @@ def main() -> None:
         ("eostudio/resources", "eostudio/resources"),
         ("LICENSE", "licenses/project"),
         ("licenses/PYTHON.txt", "licenses/python"),
+        ("licenses/PROJ.txt", "licenses/proj"),
         ("docs/THIRD_PARTY.md", "docs"),
         ("docs/DATA.md", "docs"),
         ("node_modules/vite/LICENSE.md", "licenses/vite"),

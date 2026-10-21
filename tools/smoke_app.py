@@ -24,7 +24,7 @@ def main(executable: Path) -> None:
     for package in ("rasterio", "numpy"):
         assert list(internal.glob(package + "-*.dist-info/licenses/LICENSE*")), package
     assert (internal / "rasterio/gdal_data/LICENSE.TXT").is_file()
-    assert (internal / "rasterio/proj_data/copyright").is_file()
+    assert "Frank Warmerdam" in (internal / "licenses/proj/PROJ.txt").read_text(encoding="utf-8")
     with tempfile.TemporaryDirectory(prefix="earth-smoke-") as directory:
         output = Path(directory) / "report.json"
         subprocess.run(
