@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "name": "central-valley",
+  "attribution": "Contains modified Copernicus Sentinel data (2020), processed by Jason Stys; COGs supplied by Element 84",
+  "before": {
+    "file": "before.tif",
+    "sha256": "e4463c6c7cb377e917030bd145be369c77e2193ef325b2cf793317fb38126d09",
+    "datetime": "2020-04-01T18:54:17Z"
+  },
+  "after": {
+    "file": "after.tif",
+    "sha256": "175f5d7881a51830a62270134b7068fffa5c3ac40f1154ca3c010b51ea33f910",
+    "datetime": "2020-07-30T18:54:27Z"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "absolute_tolerance": 1e-06,
+  "cases": [
+    {
+      "scenario": "central-valley",
+      "summary": {
+        "candidate_fraction": 0.2839026255416773,
+        "candidate_ha": 44.55,
+        "candidate_pixels": 4455,
+        "comparable": 15692,
+        "comparable_fraction": 0.957763671875,
+        "decrease_pixels": 3068,
+        "filtered_pixels": 16,
+        "increase_pixels": 1387,
+        "mean_delta": -0.066222,
+        "pixels": 16384,
+        "regions": 8
+      }
+    },
+    {
+      "scenario": "vegetation-loss",
+      "summary": {
+        "candidate_fraction": 0.21333333333333335,
+        "candidate_ha": 1.92,
+        "candidate_pixels": 192,
+        "comparable": 900,
+        "comparable_fraction": 0.87890625,
+        "decrease_pixels": 192,
+        "filtered_pixels": 0,
+        "increase_pixels": 0,
+        "mean_delta": -0.234667,
+        "pixels": 1024,
+        "regions": 1
+      }
+    },
+    {
+      "scenario": "water-gain",
+      "summary": {
+        "candidate_fraction": 0.21333333333333335,
+        "candidate_ha": 1.92,
+        "candidate_pixels": 192,
+        "comparable": 900,
+        "comparable_fraction": 0.87890625,
+        "decrease_pixels": 192,
+        "filtered_pixels": 0,
+        "increase_pixels": 0,
+        "mean_delta": -0.082963,
+        "pixels": 1024,
+        "regions": 1
+      }
+    },
+    {
+      "scenario": "cloud-trap",
+      "summary": {
+        "candidate_fraction": 0.0,
+        "candidate_ha": 0.0,
+        "candidate_pixels": 0,
+        "comparable": 584,
+        "comparable_fraction": 0.5703125,
+        "decrease_pixels": 0,
+        "filtered_pixels": 0,
+        "increase_pixels": 0,
+        "mean_delta": 0.0,
+        "pixels": 1024,
+        "regions": 0
+      }
+    },
+    {
+      "scenario": "shifted-grid",
+      "summary": {
+        "candidate_fraction": 0.0,
+        "candidate_ha": 0.0,
+        "candidate_pixels": 0,
+        "comparable": 840,
+        "comparable_fraction": 0.8203125,
+        "decrease_pixels": 0,
+        "filtered_pixels": 0,
+        "increase_pixels": 0,
+        "mean_delta": 0.0,
+        "pixels": 1024,
+        "regions": 0
+      }
+    },
+    {
+      "scenario": "no-change",
+      "summary": {
+        "candidate_fraction": 0.0,
+        "candidate_ha": 0.0,
+        "candidate_pixels": 0,
+        "comparable": 900,
+        "comparable_fraction": 0.87890625,
+        "decrease_pixels": 0,
+        "filtered_pixels": 0,
+        "increase_pixels": 0,
+        "mean_delta": 0.0,
+        "pixels": 1024,
+        "regions": 0
+      }
+    },
+    {
+      "scenario": "all-masked",
+      "summary": {
+        "candidate_fraction": null,
+        "candidate_ha": 0.0,
+        "candidate_pixels": 0,
+        "comparable": 0,
+        "comparable_fraction": 0.0,
+        "decrease_pixels": 0,
+        "filtered_pixels": 0,
+        "increase_pixels": 0,
+        "mean_delta": null,
+        "pixels": 1024,
+        "regions": 0
+      }
+    },
+    {
+      "scenario": "denominator-zero",
+      "summary": {
+        "candidate_fraction": null,
+        "candidate_ha": 0.0,
+        "candidate_pixels": 0,
+        "comparable": 0,
+        "comparable_fraction": 0.0,
+        "decrease_pixels": 0,
+        "filtered_pixels": 0,
+        "increase_pixels": 0,
+        "mean_delta": null,
+        "pixels": 1024,
+        "regions": 0
+      }
+    }
+  ],
+  "relative_tolerance": 1e-08,
+  "schema": 1
+}

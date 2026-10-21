@@ -1,0 +1,72 @@
+# File catalog
+
+Every tracked-intent file; dependencies/private outputs are excluded.
+
+- `.gitattributes` — Normalize source text to LF and preserve binary screenshot assets.
+- `.github/workflows/codeql.yml` — # Security and quality analysis by Jason Stys; variables/jobs: docs/FILE_CATALOG.md.
+- `.github/workflows/release.yml` — # Draft-only portable publishing by Jason Stys. Exact-commit successful workflows gate each release.
+- `.github/workflows/validate.yml` — # Offline imagery verification by Jason Stys. Matrix/contracts: docs/VALIDATION.md.
+- `.gitignore` — Exclude dependencies, runtime/private data, histories and generated builds from Git.
+- `.prettierignore` — Exclude generated indexes, locks and build/dependency trees from formatting.
+- `.prettierrc.json` — Shared readable browser/configuration/Markdown formatting options.
+- `LICENSE` — MIT License
+- `README.md` — # Earth Observation Change Studio
+- `SECURITY.md` — # Security policy
+- `docs/API.md` — # Local input, API and evidence contracts
+- `docs/ARCHITECTURE.md` — # Architecture and decisions
+- `docs/DATA.md` — # Public data, rights and provenance
+- `docs/MODEL.md` — # Spectral model and interpretation
+- `docs/RELEASE.md` — # Release and local operations runbook
+- `docs/THIRD_PARTY.md` — # Notices and references
+- `docs/USER_GUIDE.md` — # FIELDNOTE user guide
+- `docs/VALIDATION.md` — # Validation evidence and strategy
+- `docs/images/overview.jpg` — Binary screenshot asset from local application validation
+- `docs/images/workbench.jpg` — Binary screenshot asset from local application validation
+- `docs/reports/benchmark.json` — Reviewed numerical metric contracts, tolerance checked across compilers/platforms.
+- `eostudio/__init__.py` — """Offline environmental spectral-change evidence by Jason Stys; no operational surveillance."""
+- `eostudio/__main__.py` — """Local application launcher and explicit evidence exports by Jason Stys.
+- `eostudio/engine.py` — """Vectorized spectral candidates, connected regions and traceable evidence by Jason Stys.
+- `eostudio/model.py` — """Finite controls, strict local manifests and known-answer synthetic scenes by Jason Stys.
+- `eostudio/raster.py` — """Bounded local GeoTIFF contracts and nearest-grid alignment by Jason Stys.
+- `eostudio/reference.py` — """Scalar independent spectral/quality oracle by Jason Stys; not an accuracy claim about satellites.
+- `eostudio/reports.py` — """Deterministic inert reports and opt-in immutable SQLite history by Jason Stys.
+- `eostudio/resources/history.sql` — -- Immutable local analysis history by Jason Stys. Tables/triggers: docs/CODE_INDEX.md.
+- `eostudio/resources/sentinel/after-stac.json` — Original Element 84 STAC metadata response for the 2020-07-30 crop.
+- `eostudio/resources/sentinel/after.tif` — Binary public-source GeoTIFF crop; hashes, radiometry and attribution in docs/DATA.md
+- `eostudio/resources/sentinel/before-stac.json` — Original Element 84 STAC metadata response for the 2020-04-01 crop.
+- `eostudio/resources/sentinel/before.tif` — Binary public-source GeoTIFF crop; hashes, radiometry and attribution in docs/DATA.md
+- `eostudio/resources/sentinel/central-valley.json` — Strict two-scene manifest with UTC dates and exact public crop identities.
+- `eostudio/resources/sentinel/snapshot.json` — Public COG URLs, pinned radiometry, acquisition method, crop/STAC byte hashes and attribution.
+- `eostudio/server.py` — """Loopback-only, read-only HTTP application by Jason Stys; not an Internet server.
+- `launcher.py` — """Portable application entry point by Jason Stys; main and argv: docs/CODE_INDEX.md.
+- `licenses/PYTHON.txt` — A. HISTORY OF THE SOFTWARE
+- `package-lock.json` — Resolved npm dependency graph with download integrity values.
+- `package.json` — Pinned browser dependencies, Node version contract and build/test/audit scripts.
+- `playwright.config.ts` — /** Three-browser real environmental service acceptance by Jason Stys; variables: docs/CODE_INDEX.md. */
+- `pyproject.toml` — Python metadata, supported runtimes, strict lint/type/test and coverage gates.
+- `requirements-dev.in` — Scientific test, type, style, audit and packaging dependency inputs.
+- `requirements-dev.lock` — Universal pinned development/build graph with distribution hashes.
+- `requirements.in` — Rasterio/NumPy runtime constraints for appropriate native geospatial array processing.
+- `requirements.lock` — Universal exact runtime graph with distribution hashes, including compiled geospatial wheels.
+- `tests/test_analysis.py` — """Independent analytical, metamorphic and full-selector acceptance by Jason Stys.
+- `tests/test_contracts.py` — """Hostile data/schema and genuine geospatial export contracts by Jason Stys.
+- `tests/test_io.py` — """Real loopback, CLI and immutable SQL history acceptance by Jason Stys.
+- `tests/ui.spec.ts` — /** Actual service/browser environmental review acceptance by Jason Stys; index: docs/CODE_INDEX.md.
+- `tools/acquire_sample.py` — """Explicit one-time public Sentinel-2 crop acquisition by Jason Stys; never run during app use.
+- `tools/benchmark.py` — """Measured numerical contracts and runtime observations by Jason Stys.
+- `tools/package_app.py` — """Freeze and smoke-test reviewed offline geospatial bundles by Jason Stys.
+- `tools/prepare_release.py` — """Fail-closed draft release preparation by Jason Stys.
+- `tools/smoke_app.py` — """Exercise only a newly built or reviewed downloaded app by Jason Stys.
+- `tools/upload_release.py` — """Upload only a freshly smoke-tested native bundle to its draft by Jason Stys.
+- `tools/verify_repo.py` — """Generate/check exact-line code and file inventories by Jason Stys.
+- `tsconfig.json` — Strict TypeScript contracts for browser, unit and end-user test code.
+- `vitest.config.ts` — /** Pure display-logic tests by Jason Stys; configuration inventory: docs/CODE_INDEX.md. */
+- `web/contracts.test.ts` — /** Pure bounded presentation contracts by Jason Stys. Functions/fixtures: docs/CODE_INDEX.md. */
+- `web/contracts.ts` — /** Finite environmental evidence presentation by Jason Stys.
+- `web/env.d.ts` — /** Vite static asset typing by Jason Stys; reference declarations: docs/CODE_INDEX.md. */
+- `web/index.html` — <!doctype html>
+- `web/main.ts` — /** FIELDNOTE environmental review UI by Jason Stys; source/definition/variable index: docs/CODE_INDEX.md.
+- `web/style.css` — /* FIELDNOTE environmental field-book design by Jason Stys. Selectors/variable lines: docs/CODE_INDEX.md. */
+- `web/vite.config.ts` — /** Local production asset build by Jason Stys. Configuration variables: docs/CODE_INDEX.md. */
+- `docs/CODE_INDEX.md` — Generated exact-line source inventory.
+- `docs/FILE_CATALOG.md` — This generated complete file index.

@@ -1,0 +1,9 @@
+# Testing, auditing and portable packaging; include the same pinned runtime graph.
+-r requirements.in
+pytest
+pytest-cov
+hypothesis
+ruff
+mypy
+pip-audit
+pyinstaller

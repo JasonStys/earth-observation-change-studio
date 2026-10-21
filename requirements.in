@@ -1,0 +1,3 @@
+# Runtime geospatial array processing; exact distributions/hashes are in requirements.lock.
+numpy>=2.4,<3
+rasterio==1.5.2

@@ -1,0 +1,29 @@
+# Jason Stys: bounded offline environmental raster analysis, strict contracts and evidence gates.
+[project]
+name = "earth-observation-change-studio"
+version = "1.0.0"
+description = "Offline environmental spectral change review and geospatial evidence by Jason Stys"
+requires-python = ">=3.12,<3.15"
+dependencies = ["numpy>=2.4,<3", "rasterio==1.5.2"]
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+filterwarnings = ["error"]
+[tool.coverage.run]
+branch = true
+source = ["eostudio"]
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+[tool.mypy]
+strict = true
+python_version = "3.12"
+files = ["eostudio"]
+[[tool.mypy.overrides]]
+module = ["rasterio.*"]
+ignore_missing_imports = true
