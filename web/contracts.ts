@@ -40,6 +40,16 @@ export interface Region {
   pixels: number;
   bbox_rc: number[];
   review: string;
+  context: {
+    neighbor_pixels: number;
+    excluded_neighbors: number;
+    unchanged_neighbors: number;
+    other_candidate_neighbors: number;
+    filtered_candidate_neighbors: number;
+    crop_edge_sides: number;
+    touches_crop_edge: boolean;
+    complete_four_neighbor_context: boolean;
+  };
 }
 export interface Report {
   schema: 1;

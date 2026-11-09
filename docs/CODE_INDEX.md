@@ -34,119 +34,146 @@ Line numbers refer to formatted source, not this generated document.
 | 56 | `variable server` |
 | 57 | `variable url` |
 
+## eostudio/context.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 14 | `definition region_context` |
+| 15 | `parameter classes` |
+| 15 | `parameter labels` |
+| 15 | `parameter regions` |
+| 22 | `variable height` |
+| 22 | `variable width` |
+| 23 | `variable fringe` |
+| 23 | `variable region` |
+| 24 | `variable edges` |
+| 25 | `variable y` |
+| 26 | `variable x` |
+| 27 | `variable identity` |
+| 32 | `variable dx` |
+| 32 | `variable dy` |
+| 33 | `variable nx` |
+| 33 | `variable ny` |
+| 38 | `variable region` |
+| 39 | `variable identity` |
+| 40 | `variable counts` |
+| 41 | `variable code` |
+| 41 | `variable x` |
+| 41 | `variable y` |
+
 ## eostudio/engine.py
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 21 | `variable LIMITS` |
-| 30 | `definition canonical` |
-| 30 | `parameter value` |
-| 37 | `definition run_id` |
-| 37 | `parameter run` |
-| 40 | `variable key` |
-| 40 | `variable value` |
-| 44 | `definition catalog` |
-| 49 | `definition indices` |
-| 49 | `parameter metric` |
-| 49 | `parameter scene` |
-| 51 | `variable a` |
-| 51 | `variable b` |
-| 54 | `variable a` |
-| 54 | `variable b` |
-| 55 | `variable output` |
-| 60 | `definition expand_invalid` |
-| 60 | `parameter margin` |
-| 60 | `parameter mask` |
-| 62 | `variable height` |
-| 62 | `variable width` |
-| 63 | `variable padded` |
-| 64 | `variable result` |
-| 65 | `variable row` |
-| 66 | `variable column` |
-| 67 | `variable result` |
-| 71 | `definition components` |
-| 72 | `parameter minimum` |
-| 72 | `parameter raw` |
-| 75 | `variable height` |
-| 75 | `variable width` |
-| 76 | `variable visited` |
-| 77 | `variable labels` |
-| 78 | `variable final` |
-| 79 | `variable regions` |
-| 80 | `variable row` |
-| 81 | `variable column` |
-| 82 | `variable sign` |
-| 85 | `variable pending` |
-| 87 | `variable cells` |
-| 89 | `variable x` |
-| 89 | `variable y` |
-| 91 | `variable dx` |
-| 91 | `variable dy` |
-| 92 | `variable nx` |
-| 92 | `variable ny` |
-| 102 | `variable x` |
-| 102 | `variable y` |
-| 105 | `variable identity` |
-| 106 | `variable x` |
-| 106 | `variable y` |
-| 114 | `variable _` |
-| 114 | `variable y` |
+| 22 | `variable LIMITS` |
+| 31 | `definition canonical` |
+| 31 | `parameter value` |
+| 38 | `definition run_id` |
+| 38 | `parameter run` |
+| 41 | `variable key` |
+| 41 | `variable value` |
+| 45 | `definition catalog` |
+| 50 | `definition indices` |
+| 50 | `parameter metric` |
+| 50 | `parameter scene` |
+| 52 | `variable a` |
+| 52 | `variable b` |
+| 55 | `variable a` |
+| 55 | `variable b` |
+| 56 | `variable output` |
+| 61 | `definition expand_invalid` |
+| 61 | `parameter margin` |
+| 61 | `parameter mask` |
+| 63 | `variable height` |
+| 63 | `variable width` |
+| 64 | `variable padded` |
+| 65 | `variable result` |
+| 66 | `variable row` |
+| 67 | `variable column` |
+| 68 | `variable result` |
+| 72 | `definition components` |
+| 73 | `parameter minimum` |
+| 73 | `parameter raw` |
+| 76 | `variable height` |
+| 76 | `variable width` |
+| 77 | `variable visited` |
+| 78 | `variable labels` |
+| 79 | `variable final` |
+| 80 | `variable regions` |
+| 81 | `variable row` |
+| 82 | `variable column` |
+| 83 | `variable sign` |
+| 86 | `variable pending` |
+| 88 | `variable cells` |
+| 90 | `variable x` |
+| 90 | `variable y` |
+| 92 | `variable dx` |
+| 92 | `variable dy` |
+| 93 | `variable nx` |
+| 93 | `variable ny` |
+| 103 | `variable x` |
+| 103 | `variable y` |
+| 106 | `variable identity` |
+| 107 | `variable x` |
+| 107 | `variable y` |
 | 115 | `variable _` |
-| 115 | `variable x` |
+| 115 | `variable y` |
 | 116 | `variable _` |
-| 116 | `variable y` |
+| 116 | `variable x` |
 | 117 | `variable _` |
-| 117 | `variable x` |
-| 125 | `definition nullable` |
-| 125 | `parameter array` |
-| 127 | `variable v` |
-| 130 | `definition rgb` |
-| 130 | `parameter scene` |
-| 132 | `variable colors` |
-| 135 | `variable color` |
-| 139 | `definition analyze` |
-| 139 | `parameter pair` |
-| 139 | `parameter settings` |
-| 141 | `variable after` |
-| 141 | `variable before` |
-| 142 | `variable a` |
-| 142 | `variable b` |
-| 143 | `variable footprint` |
-| 144 | `variable allowed` |
-| 145 | `variable qa` |
-| 146 | `variable denominator` |
-| 147 | `variable valid` |
-| 148 | `variable delta` |
-| 149 | `variable threshold` |
-| 150 | `variable raw` |
-| 153 | `variable ra` |
-| 153 | `variable rb` |
-| 153 | `variable reference` |
-| 160 | `variable actual` |
-| 160 | `variable expected_values` |
-| 161 | `variable expected` |
-| 161 | `variable value` |
-| 164 | `variable final` |
-| 164 | `variable labels` |
-| 164 | `variable regions` |
-| 165 | `variable count` |
-| 166 | `variable total` |
-| 167 | `variable retained` |
-| 168 | `variable retained_count` |
-| 169 | `variable quality` |
-| 177 | `variable region` |
-| 180 | `variable grid` |
-| 181 | `variable area` |
-| 182 | `variable truth` |
-| 184 | `variable tp` |
-| 185 | `variable fp` |
-| 186 | `variable fn` |
-| 187 | `variable truth` |
-| 197 | `variable report` |
-| 238 | `variable t` |
-| 255 | `definition build_run` |
-| 255 | `parameter settings` |
-| 257 | `variable settings` |
+| 117 | `variable y` |
+| 118 | `variable _` |
+| 118 | `variable x` |
+| 126 | `definition nullable` |
+| 126 | `parameter array` |
+| 128 | `variable v` |
+| 131 | `definition rgb` |
+| 131 | `parameter scene` |
+| 133 | `variable colors` |
+| 136 | `variable color` |
+| 140 | `definition analyze` |
+| 140 | `parameter pair` |
+| 140 | `parameter settings` |
+| 142 | `variable after` |
+| 142 | `variable before` |
+| 143 | `variable a` |
+| 143 | `variable b` |
+| 144 | `variable footprint` |
+| 145 | `variable allowed` |
+| 146 | `variable qa` |
+| 147 | `variable denominator` |
+| 148 | `variable valid` |
+| 149 | `variable delta` |
+| 150 | `variable threshold` |
+| 151 | `variable raw` |
+| 154 | `variable ra` |
+| 154 | `variable rb` |
+| 154 | `variable reference` |
+| 161 | `variable actual` |
+| 161 | `variable expected_values` |
+| 162 | `variable expected` |
+| 162 | `variable value` |
+| 165 | `variable final` |
+| 165 | `variable labels` |
+| 165 | `variable regions` |
+| 166 | `variable count` |
+| 167 | `variable total` |
+| 168 | `variable retained` |
+| 169 | `variable retained_count` |
+| 170 | `variable quality` |
+| 178 | `variable region` |
+| 182 | `variable grid` |
+| 183 | `variable area` |
+| 184 | `variable truth` |
+| 186 | `variable tp` |
+| 187 | `variable fp` |
+| 188 | `variable fn` |
+| 189 | `variable truth` |
+| 199 | `variable report` |
+| 240 | `variable t` |
+| 257 | `definition build_run` |
+| 257 | `parameter settings` |
+| 259 | `variable settings` |
 
 ## eostudio/model.py
 
@@ -495,6 +522,27 @@ Line numbers refer to formatted source, not this generated document.
 | 164 | `variable pair` |
 | 165 | `variable report` |
 
+## tests/test_context.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 18 | `definition test_unknown_four_neighbor_ring_and_diagonal_exclusion` |
+| 20 | `variable labels` |
+| 22 | `variable classes` |
+| 25 | `variable regions` |
+| 30 | `variable context` |
+| 36 | `definition test_crop_edges_and_unique_neighbor_counts` |
+| 38 | `variable labels` |
+| 39 | `variable classes` |
+| 43 | `variable regions` |
+| 45 | `variable context` |
+| 59 | `definition test_region_exports_keep_context_without_changing_candidate_classification` |
+| 61 | `variable run` |
+| 63 | `variable geo` |
+| 65 | `variable region` |
+| 66 | `variable context` |
+| 69 | `variable key` |
+
 ## tests/test_contracts.py
 
 | Line | Definition / variable / structural identifier |
@@ -661,19 +709,21 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 16 | `duplicate` |
-| 17 | `ids` |
-| 49 | `download` |
-| 51 | `saved` |
-| 52 | `result` |
-| 85 | `name` |
-| 86 | `href` |
-| 87 | `response` |
-| 132 | `response` |
-| 133 | `body` |
-| 146 | `size` |
-| 147 | `width` |
-| 148 | `scroll` |
+| 20 | `report` |
+| 22 | `geometry` |
+| 35 | `duplicate` |
+| 36 | `ids` |
+| 68 | `download` |
+| 70 | `saved` |
+| 71 | `result` |
+| 104 | `name` |
+| 105 | `href` |
+| 106 | `response` |
+| 151 | `response` |
+| 152 | `body` |
+| 165 | `size` |
+| 166 | `width` |
+| 167 | `scroll` |
 
 ## tools/acquire_sample.py
 
@@ -943,49 +993,58 @@ Line numbers refer to formatted source, not this generated document.
 | 40 | `pixels` |
 | 41 | `bbox_rc` |
 | 42 | `review` |
-| 44 | `Report` |
-| 45 | `schema` |
-| 46 | `id` |
-| 47 | `name` |
-| 48 | `settings` |
-| 49 | `grid` |
-| 50 | `provenance` |
-| 51 | `kind` |
-| 52 | `attribution` |
-| 53 | `ground_truth` |
-| 54 | `scenes` |
-| 56 | `method` |
-| 57 | `summary` |
-| 58 | `quality` |
-| 59 | `truth` |
-| 60 | `sensitivity` |
-| 61 | `regions` |
-| 62 | `pixels` |
-| 63 | `before_index` |
-| 64 | `after_index` |
-| 65 | `delta` |
-| 66 | `class` |
-| 67 | `region` |
-| 68 | `before_rgb` |
-| 69 | `after_rgb` |
-| 71 | `limits` |
-| 74 | `escape` |
-| 81 | `display` |
-| 86 | `coercion` |
-| 87 | `preferences` |
-| 89 | `r` |
-| 98 | `k` |
-| 106 | `isReport` |
-| 108 | `r` |
-| 109 | `finite` |
-| 135 | `count` |
-| 137 | `k` |
-| 204 | `pixelColor` |
-| 205 | `packed` |
-| 206 | `classification` |
-| 207 | `x` |
-| 208 | `y` |
-| 209 | `change` |
+| 43 | `context` |
+| 44 | `neighbor_pixels` |
+| 45 | `excluded_neighbors` |
+| 46 | `unchanged_neighbors` |
+| 47 | `other_candidate_neighbors` |
+| 48 | `filtered_candidate_neighbors` |
+| 49 | `crop_edge_sides` |
+| 50 | `touches_crop_edge` |
+| 51 | `complete_four_neighbor_context` |
+| 54 | `Report` |
+| 55 | `schema` |
+| 56 | `id` |
+| 57 | `name` |
+| 58 | `settings` |
+| 59 | `grid` |
+| 60 | `provenance` |
+| 61 | `kind` |
+| 62 | `attribution` |
+| 63 | `ground_truth` |
+| 64 | `scenes` |
+| 66 | `method` |
+| 67 | `summary` |
+| 68 | `quality` |
+| 69 | `truth` |
+| 70 | `sensitivity` |
+| 71 | `regions` |
+| 72 | `pixels` |
+| 73 | `before_index` |
+| 74 | `after_index` |
+| 75 | `delta` |
+| 76 | `class` |
+| 77 | `region` |
+| 78 | `before_rgb` |
+| 79 | `after_rgb` |
+| 81 | `limits` |
+| 84 | `escape` |
+| 91 | `display` |
+| 96 | `coercion` |
+| 97 | `preferences` |
+| 99 | `r` |
+| 108 | `k` |
+| 116 | `isReport` |
+| 118 | `r` |
+| 119 | `finite` |
+| 145 | `count` |
+| 147 | `k` |
+| 214 | `pixelColor` |
+| 215 | `packed` |
+| 216 | `classification` |
+| 217 | `x` |
+| 218 | `y` |
+| 219 | `change` |
 
 ## web/env.d.ts
 
