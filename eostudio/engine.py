@@ -14,6 +14,7 @@ from typing import Any
 import numpy as np
 from numpy.typing import NDArray
 
+from eostudio.context import region_context
 from eostudio.model import CASES, CHOICES, Pair, Settings, fixture
 from eostudio.raster import FloatGrid, Scene, align
 from eostudio.reference import evaluate
@@ -177,6 +178,7 @@ def analyze(pair: Pair, settings: Settings) -> dict[str, Any]:
         region["pixels"] for region in regions
     ):
         raise RuntimeError("Pixel accounting failed; evidence withheld")
+    region_context(labels, final, regions)
     grid = before.grid.document()
     area = grid["pixel_area_m2"] / 10000
     truth = None

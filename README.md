@@ -2,6 +2,8 @@
 
 **Notice the change. Question the cause.** An offline environmental imagery review application by [Jason Stys](https://github.com/JasonStys).
 
+Review [candidate-region neighborhood context](docs/REGION_CONTEXT.md), including excluded fringe pixels, crop-edge contact and nearby unchanged/filtered/other candidate pixels. The same context travels in JSON, GeoJSON and human review exports; it is an availability cue, not a confirmed environmental label.
+
 FIELDNOTE compares two dates on one geospatial grid, masks poor-quality pixels, calculates NDVI or green/NIR NDWI differences, and extracts connected candidate regions for human review. **Python, NumPy and Rasterio/GDAL** handle array computation, GeoTIFFs, alignment and geometry. **TypeScript, HTML, CSS and Canvas** present real raster evidence in a responsive browser. **SQL/SQLite** provides optional immutable local evidence history.
 
 The repository includes two small, attributed **public Sentinel-2 observations** of Central Valley agricultural land and seven **synthetic known-answer cases**. It never presents a spectral threshold as a confirmed flood, damage or vegetation-loss label. Seasonal crop management, illumination, atmosphere, residual clouds and registration error can explain differences. No operational surveillance, targeting, private imagery collection, remote accounts or telemetry is included.

@@ -16,15 +16,18 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/ARCHITECTURE.md` — # Architecture and decisions
 - `docs/DATA.md` — # Public data, rights and provenance
 - `docs/MODEL.md` — # Spectral model and interpretation
+- `docs/REGION_CONTEXT.md` — # Inspect candidate-region context
 - `docs/RELEASE.md` — # Release and local operations runbook
 - `docs/THIRD_PARTY.md` — # Notices and references
 - `docs/USER_GUIDE.md` — # FIELDNOTE user guide
 - `docs/VALIDATION.md` — # Validation evidence and strategy
 - `docs/images/overview.jpg` — Binary screenshot asset from local application validation
 - `docs/images/workbench.jpg` — Binary screenshot asset from local application validation
+- `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Candidate context validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed numerical metric contracts, tolerance checked across compilers/platforms.
 - `eostudio/__init__.py` — """Offline environmental spectral-change evidence by Jason Stys; no operational surveillance."""
 - `eostudio/__main__.py` — """Local application launcher and explicit evidence exports by Jason Stys.
+- `eostudio/context.py` — """Candidate-region four-neighbor context by Jason Stys.
 - `eostudio/engine.py` — """Vectorized spectral candidates, connected regions and traceable evidence by Jason Stys.
 - `eostudio/model.py` — """Finite controls, strict local manifests and known-answer synthetic scenes by Jason Stys.
 - `eostudio/raster.py` — """Bounded local GeoTIFF contracts and nearest-grid alignment by Jason Stys.
@@ -50,6 +53,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `requirements.in` — Rasterio/NumPy runtime constraints for appropriate native geospatial array processing.
 - `requirements.lock` — Universal exact runtime graph with distribution hashes, including compiled geospatial wheels.
 - `tests/test_analysis.py` — """Independent analytical, metamorphic and full-selector acceptance by Jason Stys.
+- `tests/test_context.py` — """Independent local raster-neighborhood counts by Jason Stys.
 - `tests/test_contracts.py` — """Hostile data/schema and genuine geospatial export contracts by Jason Stys.
 - `tests/test_io.py` — """Real loopback, CLI and immutable SQL history acceptance by Jason Stys.
 - `tests/ui.spec.ts` — /** Actual service/browser environmental review acceptance by Jason Stys; index: docs/CODE_INDEX.md.

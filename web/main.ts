@@ -547,7 +547,7 @@ function reviewForm(): void {
   if (!region) return;
   const saved = decisions.get(id);
   document.querySelector("#region-info")!.textContent =
-    `Region ${id}: ${region.direction}, ${region.pixels} pixels. Pixel bounds: ${region.bbox_rc.join(", ")}.`;
+    `Region ${id}: ${region.direction}, ${region.pixels} pixels. Pixel bounds: ${region.bbox_rc.join(", ")}. Four-neighbor context: ${region.context.neighbor_pixels} unique surrounding pixels; ${region.context.excluded_neighbors} excluded, ${region.context.unchanged_neighbors} unchanged, ${region.context.other_candidate_neighbors} other candidates, ${region.context.filtered_candidate_neighbors} filtered candidates; ${region.context.crop_edge_sides} crop-edge sides. ${region.context.complete_four_neighbor_context ? "Immediate context available" : "Incomplete immediate context: inspect excluded neighbors/crop boundaries"}. These are review cues, not a confirmed environmental cause; per-region rings can overlap.`;
   document.querySelector<HTMLSelectElement>("#decision")!.value = saved?.decision ?? "unreviewed";
   document.querySelector<HTMLTextAreaElement>("#note")!.value = saved?.note ?? "";
 }

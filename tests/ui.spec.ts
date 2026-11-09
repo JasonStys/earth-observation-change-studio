@@ -5,6 +5,25 @@ import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { readFile } from "node:fs/promises";
 
+test("region review explains missing immediate context and exports it", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/");
+  await expect(page.locator("#evidence")).toBeVisible();
+  await page.locator("#scenario").selectOption("vegetation-loss");
+  await expect(page.locator("#status")).toContainText("Verified");
+  await expect(page.locator("#truth")).toContainText("IoU 1.000");
+  await page.locator("#region").selectOption("1");
+  await expect(page.locator("#region-info")).toContainText("Four-neighbor context");
+  await expect(page.locator("#region-info")).toContainText("not a confirmed environmental cause");
+  const report = await (await request.get("/api/run?scenario=vegetation-loss")).json();
+  expect(report.regions[0].context.neighbor_pixels).toBeGreaterThan(0);
+  const geometry = await (
+    await request.get("/api/report?scenario=vegetation-loss&format=geojson")
+  ).json();
+  expect(geometry.features[0].properties.context).toEqual(report.regions[0].context);
+});
 test("SCL selector survives report rendering and all element IDs are unique", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("#evidence")).toBeVisible();
