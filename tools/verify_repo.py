@@ -10,6 +10,11 @@ import re
 import subprocess
 from pathlib import Path
 
+if __package__:
+    from .publication_text import public_text
+else:
+    from publication_text import public_text
+
 ROOT = Path(__file__).resolve().parents[1]
 SKIP = {
     ".git",
@@ -32,6 +37,10 @@ SKIP = {
 }
 SOURCE_SUFFIXES = {".py", ".ts", ".mjs", ".css", ".html", ".sql", ".cpp", ".hpp"}
 FILE_PURPOSES = {
+    "docs/reports/project-guide.docx": "Reviewed Word project guide bound to the documented source revision.",
+    "docs/reports/validation-review.docx": "Reviewed Word validation evidence and explicit test/analysis limitations.",
+    "docs/reports/validation-evidence.xlsx": "Reviewed Excel workflow and test-source Tables with recalculated outcome formulas.",
+    "docs/reports/publications.json": "Exact Office publication identities, approved page/tab scopes and immutable source baselines.",
     "tools/draft_lookup.py": "Complete bounded authenticated release listing, unique tag and immutable-ID draft validation.",
     "tests/test_draft_lookup.py": "Independent draft/public/pagination/identity and transport-failure lookup cases.",
     "tools/release_contract.py": "Version/source coherence, exact-main prerequisites and immutable draft upload guards.",
@@ -134,7 +143,7 @@ def inventory() -> tuple[str, str]:
             if path.suffix == ".tif"
             else "Binary screenshot asset from local application validation"
             if path.suffix in {".jpg", ".png"}
-            else path.read_text(encoding="utf-8")
+            else public_text(path, ROOT)
         )
         summary = content.splitlines()[0][:150] if content.splitlines() else "Empty file"
         summary = FILE_PURPOSES.get(relative, summary)

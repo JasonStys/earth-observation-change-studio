@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "project": "earth-observation-change-studio",
+  "author": "Jason Stys",
+  "editionDate": "2026-11-09",
+  "sourceBaseline": "e63d4d111512a36d1ffb19a04059b4d8965ac5d2",
+  "sourceUrl": "https://github.com/JasonStys/earth-observation-change-studio/tree/e63d4d111512a36d1ffb19a04059b4d8965ac5d2",
+  "functionalEvidenceBaseline": "e63d4d111512a36d1ffb19a04059b4d8965ac5d2",
+  "evidenceObservedAt": "2026-11-10T05:25:40.628667+00:00",
+  "workflowEvidence": [
+    {
+      "conclusion": "success",
+      "databaseId": 42752679175,
+      "event": "push",
+      "headSha": "e63d4d111512a36d1ffb19a04059b4d8965ac5d2",
+      "name": "CodeQL",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/earth-observation-change-studio/actions/runs/42752679175"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42752679131,
+      "event": "push",
+      "headSha": "e63d4d111512a36d1ffb19a04059b4d8965ac5d2",
+      "name": "Validation",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/earth-observation-change-studio/actions/runs/42752679131"
+    }
+  ],
+  "summary": "Inspect environmental change candidates, review immediate neighboring context and export GeoJSON in the 1.1 portable workflow.",
+  "rationale": "Carries the frozen geospatial runtime and source identity with the reviewer, so region context and actual exports remain inspectable after downloading and extracting the app.",
+  "limitations": [
+    "Four-neighbor availability describes local raster context, not environmental cause, registration accuracy or verified ground truth.",
+    "Uses bounded synthetic/frozen public environmental imagery; no identifying surveillance or targeting capability.",
+    "Unsigned portable desktop packages; no signed installer, public accounts, native mobile installation or environmental certification."
+  ],
+  "documents": [
+    {
+      "filename": "project-guide.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 86907,
+      "sha256": "b793919ec1d957cb35cdfdd13f36b3f41cc0005a25b1e2ef287d5f6b238c32bf",
+      "sourceBaseline": "e63d4d111512a36d1ffb19a04059b4d8965ac5d2",
+      "visualReview": {
+        "approved": true,
+        "method": "Every rendered page individually viewed at readable original resolution",
+        "pageCount": 5,
+        "renderedPageSha256": {
+          "page-1.png": "de58d79362ea8b5e7e66a94d5a58d76819974804c08f94ad162f57bd2a98da98",
+          "page-2.png": "2ecf2ac40d2f6d3da9673119f1a9e9526e6d0c4618b17e590a8b943b69a0610e",
+          "page-3.png": "4911577e385fd549ecabc6b067609207f5a3dee8e590c0648c0fb4c686c7f6be",
+          "page-4.png": "0184d8dd2edc08bf9939053c0d16355225a4ca3d07602b529c2a83fb0e76ecaa",
+          "page-5.png": "8b7e0b0cd410a066476c451015196a4a7fa15e751026f46f4305aa51d1c4ba89"
+        }
+      }
+    },
+    {
+      "filename": "validation-review.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 43556,
+      "sha256": "6f9e10dd31cbb98efd6c5b9dfbcac0541a4ca18683446e75edee22120cc20d3f",
+      "sourceBaseline": "e63d4d111512a36d1ffb19a04059b4d8965ac5d2",
+      "visualReview": {
+        "approved": true,
+        "method": "Every rendered page individually viewed at readable original resolution",
+        "pageCount": 4,
+        "renderedPageSha256": {
+          "page-1.png": "03294485e78ee6ac48549f92fcf44b9c57af859466b19f5b77733054cda81eef",
+          "page-2.png": "6dd985be11143623fe9c66ccd118b78430e38777cadd7464fef21992a5cf4124",
+          "page-3.png": "be058e11d3ee748464c0a27f619418df721fb26026ae6286e4757937aabeaeba",
+          "page-4.png": "c97686538912c743304721f1f79d88666d69ee241b20737ed6bb02ceb99a11e0"
+        }
+      }
+    },
+    {
+      "filename": "validation-evidence.xlsx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "bytes": 7366,
+      "sha256": "fe458d035e54d1d34b750db92d276ff2a9b148e9d5800a251b273dfbfc8ceac8",
+      "sourceBaseline": "e63d4d111512a36d1ffb19a04059b4d8965ac5d2",
+      "visualReview": {
+        "approved": true,
+        "tabsReviewed": ["Test sources", "Workflow evidence"],
+        "previewSha256": {
+          "Workflow evidence": "b2fd73f6f3f4517e0dea9efcf9738118ffbdb6355ec970e05e62153f902c178a",
+          "Test sources": "c8d6c8e672c907649fecfb10b330dc11bede10533fbd3dca81544fcd63fd320b"
+        },
+        "tables": [
+          {
+            "path": "xl/tables/table1.xml",
+            "name": "WorkflowEvidence",
+            "range": "A7:D9",
+            "columns": 4,
+            "autoFilter": true,
+            "filterButtonsEnabled": true
+          },
+          {
+            "path": "xl/tables/table2.xml",
+            "name": "TestSources",
+            "range": "A7:C17",
+            "columns": 3,
+            "autoFilter": true,
+            "filterButtonsEnabled": true
+          }
+        ],
+        "formulaCount": 4,
+        "failureSensitivityReceiptPassed": true,
+        "formulaErrors": []
+      }
+    }
+  ],
+  "scope": "Reviewed documentation editions of the cited source. Checksums identify bytes, not authorship. Historical measurements retain their own dates; integration CI must be checked separately."
+}

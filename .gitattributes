@@ -3,3 +3,5 @@
 *.tif binary
 *.png binary
 *.jpg binary
+*.docx binary
+*.xlsx binary
