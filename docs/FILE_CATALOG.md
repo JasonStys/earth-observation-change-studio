@@ -57,6 +57,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tests/test_analysis.py` — """Independent analytical, metamorphic and full-selector acceptance by Jason Stys.
 - `tests/test_context.py` — """Independent local raster-neighborhood counts by Jason Stys.
 - `tests/test_contracts.py` — """Hostile data/schema and genuine geospatial export contracts by Jason Stys.
+- `tests/test_draft_lookup.py` — Independent draft/public/pagination/identity and transport-failure lookup cases.
 - `tests/test_io.py` — """Real loopback, CLI and immutable SQL history acceptance by Jason Stys.
 - `tests/test_package_info.py` — Frozen metadata corruption, explicit source mode and pre-bind owned-instance marker regressions.
 - `tests/test_portable_archive.py` — Actual archive bytes, traversal/link/type/budget/permission and extraction regression cases.
@@ -64,6 +65,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tests/ui.spec.ts` — /** Actual service/browser environmental review acceptance by Jason Stys; index: docs/CODE_INDEX.md.
 - `tools/acquire_sample.py` — """Explicit one-time public Sentinel-2 crop acquisition by Jason Stys; never run during app use.
 - `tools/benchmark.py` — """Measured numerical contracts and runtime observations by Jason Stys.
+- `tools/draft_lookup.py` — Complete bounded authenticated release listing, unique tag and immutable-ID draft validation.
 - `tools/legacy_smoke.py` — Preserved native domain CLI, resource, license, persistence and HTTP acceptance under active guards.
 - `tools/native_browser.mjs` — Owned Chromium context, local resource boundary, version and real-error acceptance.
 - `tools/native_feature_smoke.mjs` — Actual extracted-application new-feature UI/API/download acceptance with independent arithmetic.
