@@ -2,6 +2,7 @@
  * Real report arrays drive every pixel; client review is opt-in local memory, never an automatic decision.
  */
 import "./style.css";
+import { appendReleaseVersion } from "./release-version";
 import {
   cases,
   choices,
@@ -563,3 +564,5 @@ document.querySelector("#remember")!.addEventListener("change", (e) => {
   }
 });
 void load();
+
+appendReleaseVersion();
