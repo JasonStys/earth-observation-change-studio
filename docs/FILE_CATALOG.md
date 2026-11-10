@@ -21,11 +21,17 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/THIRD_PARTY.md` — # Notices and references
 - `docs/USER_GUIDE.md` — # FIELDNOTE user guide
 - `docs/VALIDATION.md` — # Validation evidence and strategy
+- `docs/handbook.md` — # Earth Observation Change Studio handbook
 - `docs/images/overview.jpg` — Binary screenshot asset from local application validation
 - `docs/images/workbench.jpg` — Binary screenshot asset from local application validation
 - `docs/reports/PORTABLE_RELEASE_20261109.md` — # Portable 1.1 release validation — 2026-11-09
 - `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Candidate context validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed numerical metric contracts, tolerance checked across compilers/platforms.
+- `docs/reports/documentation-refresh-2026-11-09.md` — # Documentation refresh — 2026-11-09
+- `docs/reports/project-guide.docx` — Reviewed Word project guide bound to the documented source revision.
+- `docs/reports/publications.json` — Exact Office publication identities, approved page/tab scopes and immutable source baselines.
+- `docs/reports/validation-evidence.xlsx` — Reviewed Excel workflow and test-source Tables with recalculated outcome formulas.
+- `docs/reports/validation-review.docx` — Reviewed Word validation evidence and explicit test/analysis limitations.
 - `eostudio/__init__.py` — """Offline environmental spectral-change evidence by Jason Stys; no operational surveillance."""
 - `eostudio/__main__.py` — """Local application launcher and explicit evidence exports by Jason Stys.
 - `eostudio/context.py` — """Candidate-region four-neighbor context by Jason Stys.
@@ -61,6 +67,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tests/test_io.py` — """Real loopback, CLI and immutable SQL history acceptance by Jason Stys.
 - `tests/test_package_info.py` — Frozen metadata corruption, explicit source mode and pre-bind owned-instance marker regressions.
 - `tests/test_portable_archive.py` — Actual archive bytes, traversal/link/type/budget/permission and extraction regression cases.
+- `tests/test_publication_text.py` — """Jason Stys: actual Office ZIP fixtures retain text scanning and reject unknown content.
 - `tests/test_release_contract.py` — Independent negative source/version/prerequisite/draft/hash/upload authorization cases.
 - `tests/ui.spec.ts` — /** Actual service/browser environmental review acceptance by Jason Stys; index: docs/CODE_INDEX.md.
 - `tools/acquire_sample.py` — """Explicit one-time public Sentinel-2 crop acquisition by Jason Stys; never run during app use.
@@ -72,6 +79,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tools/package_app.py` — """Freeze and smoke-test reviewed offline geospatial bundles by Jason Stys.
 - `tools/portable_archive.py` — Bounded Windows ZIP/POSIX tar creation, metadata inspection and fresh safe extraction.
 - `tools/prepare_release.py` — """Prepare only a new version/source-bound draft by Jason Stys.
+- `tools/publication_text.py` — """Jason Stys: inspect only named reviewed Office editions without hiding their XML.
 - `tools/release_contract.py` — Version/source coherence, exact-main prerequisites and immutable draft upload guards.
 - `tools/smoke_app.py` — """Actual extracted-executable CLI, HTTP and Chromium acceptance by Jason Stys.
 - `tools/upload_release.py` — """Upload one inspected source/version archive pair by Jason Stys.
