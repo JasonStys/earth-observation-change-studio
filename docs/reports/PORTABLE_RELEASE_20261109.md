@@ -5,7 +5,7 @@ for the next portable release. It does not claim hosted results before those wor
 
 ## Purpose and implementation
 
-The published1.0 portable artifacts predate the latest practical workflow. Version1.1 makes
+The published 1.0 portable artifacts predate the latest practical workflow. Version 1.1 makes
 product identity consistent across Python, npm/lock metadata, the running service and UI.
 `RELEASE.json` binds a bundle to its declared source, version, platform and clean/dirty state.
 Older published releases and users' histories are preserved.
@@ -24,7 +24,7 @@ transport steps. No application startup calls GitHub or transmits user data.
 
 ## Actual new-feature acceptance
 
-Actual frozen Rasterio/NumPy/GDAL dependencies, the known192-pixel vegetation-loss rectangle and its56 unique exterior neighbors, region selection, exact GeoJSON context, public frozen crop handling and original SQL/coordinate exports. The reviewed spectral-change context remains a four-neighbor availability description.
+Actual frozen Rasterio/NumPy/GDAL dependencies, the known 192-pixel vegetation-loss rectangle and its 56 unique exterior neighbors, region selection, exact GeoJSON context, public frozen crop handling and original SQL/coordinate exports. The reviewed spectral-change context remains a four-neighbor availability description.
 
 The compiled child must announce its owned ephemeral loopback URL and echo the random smoke
 marker, runtime version and exact embedded metadata. Probes refuse redirects/proxies, enforce
@@ -35,12 +35,12 @@ that are active with `python -O`; they were not discarded when the new browser j
 
 ## Observed local results
 
-Windows/Python3.14.6 and Node24.18.1, using each repository's isolated locked environment:
+Windows/Python 3.14.6 and Node 24.18.1, using each repository's isolated locked environment:
 
 | Gate                                                                     | Observed result                                        |
 | ------------------------------------------------------------------------ | ------------------------------------------------------ |
-| Complete Python/model/native/HTTP suite                                  | 1072 passed; 99.74% combined statement/branch coverage |
-| Focused release/archive/frozen-identity negative cases                   | 70 passed, included in the complete suite above        |
+| Complete Python/model/native/HTTP suite                                  | 1091 passed; 99.74% combined statement/branch coverage |
+| Focused release/archive/frozen-identity/draft lookup cases               | 89 passed and 28 subtests; included above              |
 | Existing TypeScript unit suite                                           | 12 passed                                              |
 | Strict TypeScript/Vite production build                                  | Passed                                                 |
 | Ruff lint/format and strict domain mypy                                  | Passed                                                 |
@@ -50,10 +50,10 @@ Windows/Python3.14.6 and Node24.18.1, using each repository's isolated locked en
 
 Observed local dirty-build archive (not a published or exact-clean CI artifact):
 
-- File:`earth-observation-change-studio-v1.1.0-windows-amd64.zip`
-- Bytes:57948935; members:1157
-- SHA-256:`4d61dd12797f710fd250559e14d6d5287cbaa77ecd5757526c14d4d13f9c6fa2`
-- Embedded source:`fa160d2ddf0a94561bf71cdc8783b1c961ab4e29` with `source_dirty:true`.
+- File: `earth-observation-change-studio-v1.1.0-windows-amd64.zip`
+- Bytes: 57948935; members: 1157
+- SHA-256: `4d61dd12797f710fd250559e14d6d5287cbaa77ecd5757526c14d4d13f9c6fa2`
+- Embedded source: `fa160d2ddf0a94561bf71cdc8783b1c961ab4e29` with `source_dirty:true`.
 
 The dirty flag is intentional for local pre-commit acceptance. A release requires a fresh
 clean CI build at its accepted commit; this local checksum must not be presented as that
@@ -75,9 +75,37 @@ accessible names including their arrow decoration. Failures were not accepted as
 corrected checks ran against fresh extracted artifacts. Private failed evidence remains
 outside the repository. No application numerical algorithm was changed to satisfy the harness.
 
-Chromium dependency installation has a15-minute setup budget inside a25-minute native job,
-based on observed hosted setup duration. Actual CLI30-second, HTTP8-second, browser45-second
-and complete extracted-smoke120-second hard deadlines remain bounded, without test retries.
+Chromium dependency installation has a 15-minute setup budget inside a 25-minute native job,
+based on observed hosted setup duration. Actual CLI 30-second, HTTP 8-second, browser 45-second
+and complete extracted-smoke 120-second hard deadlines remain bounded, without test retries.
+
+## Draft lookup correction and independent verification
+
+The first Earth Observation 1.1 release attempt passed its macOS extracted native/browser
+journey, then failed during upload because GitHub's release-by-tag REST endpoint returns
+**published** releases. An untagged draft existed in the authenticated release list and
+could be read by numeric ID, while that tag endpoint returned 404. This was a release-tooling
+API error; the native application checks were not bypassed or changed to accept it.
+
+Preparation and upload now use a complete authenticated listing capped at three pages of
+100 releases, require a unique exact tag, and reread the immutable numeric ID. Full-page
+exhaustion, malformed metadata, duplicate IDs/tags, identity changes, foreign API/upload
+URLs and transport/authentication failures stop the operation. An existing public release
+or draft blocks version creation even when no Git tag exists. Upload still requires the
+same source, an unpublished non-prerelease draft, exact archive metadata/digest and absent
+asset names. No overwrite, retry or permissive 404 fallback was introduced.
+
+Nineteen independent real-shape API cases exercise untagged draft lookup, complete absence,
+existing published versions, later pages, bounded-history exhaustion, identity swaps and
+failures. Integrated prepare/upload fixtures use those real list/detail shapes and reject
+the published-only tag endpoint. These tests are included in the observed suite above.
+The changed lookup is release transport code, not bundled application behavior; existing
+actual extracted-native evidence remains applicable. Clean-source three-platform CI is
+still required before publication.
+
+Sources: [GitHub REST release-by-tag](https://docs.github.com/en/rest/releases/releases#get-a-release-by-tag-name),
+[authenticated release listing](https://docs.github.com/en/rest/releases/releases#list-releases),
+[GitHub CLI draft lookup implementation](https://github.com/cli/cli/blob/trunk/pkg/cmd/release/shared/fetch.go).
 
 ## Scope and limitations
 
