@@ -17,12 +17,13 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/DATA.md` — # Public data, rights and provenance
 - `docs/MODEL.md` — # Spectral model and interpretation
 - `docs/REGION_CONTEXT.md` — # Inspect candidate-region context
-- `docs/RELEASE.md` — # Release and local operations runbook
+- `docs/RELEASE.md` — # Portable application and release runbook
 - `docs/THIRD_PARTY.md` — # Notices and references
 - `docs/USER_GUIDE.md` — # FIELDNOTE user guide
 - `docs/VALIDATION.md` — # Validation evidence and strategy
 - `docs/images/overview.jpg` — Binary screenshot asset from local application validation
 - `docs/images/workbench.jpg` — Binary screenshot asset from local application validation
+- `docs/reports/PORTABLE_RELEASE_20261109.md` — # Portable 1.1 release validation — 2026-11-09
 - `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Candidate context validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed numerical metric contracts, tolerance checked across compilers/platforms.
 - `eostudio/__init__.py` — """Offline environmental spectral-change evidence by Jason Stys; no operational surveillance."""
@@ -30,6 +31,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `eostudio/context.py` — """Candidate-region four-neighbor context by Jason Stys.
 - `eostudio/engine.py` — """Vectorized spectral candidates, connected regions and traceable evidence by Jason Stys.
 - `eostudio/model.py` — """Finite controls, strict local manifests and known-answer synthetic scenes by Jason Stys.
+- `eostudio/package_info.py` — Bounded frozen release identity; source mode never borrows a packaged-source claim.
 - `eostudio/raster.py` — """Bounded local GeoTIFF contracts and nearest-grid alignment by Jason Stys.
 - `eostudio/reference.py` — """Scalar independent spectral/quality oracle by Jason Stys; not an accuracy claim about satellites.
 - `eostudio/reports.py` — """Deterministic inert reports and opt-in immutable SQLite history by Jason Stys.
@@ -56,13 +58,21 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tests/test_context.py` — """Independent local raster-neighborhood counts by Jason Stys.
 - `tests/test_contracts.py` — """Hostile data/schema and genuine geospatial export contracts by Jason Stys.
 - `tests/test_io.py` — """Real loopback, CLI and immutable SQL history acceptance by Jason Stys.
+- `tests/test_package_info.py` — Frozen metadata corruption, explicit source mode and pre-bind owned-instance marker regressions.
+- `tests/test_portable_archive.py` — Actual archive bytes, traversal/link/type/budget/permission and extraction regression cases.
+- `tests/test_release_contract.py` — Independent negative source/version/prerequisite/draft/hash/upload authorization cases.
 - `tests/ui.spec.ts` — /** Actual service/browser environmental review acceptance by Jason Stys; index: docs/CODE_INDEX.md.
 - `tools/acquire_sample.py` — """Explicit one-time public Sentinel-2 crop acquisition by Jason Stys; never run during app use.
 - `tools/benchmark.py` — """Measured numerical contracts and runtime observations by Jason Stys.
+- `tools/legacy_smoke.py` — Preserved native domain CLI, resource, license, persistence and HTTP acceptance under active guards.
+- `tools/native_browser.mjs` — Owned Chromium context, local resource boundary, version and real-error acceptance.
+- `tools/native_feature_smoke.mjs` — Actual extracted-application new-feature UI/API/download acceptance with independent arithmetic.
 - `tools/package_app.py` — """Freeze and smoke-test reviewed offline geospatial bundles by Jason Stys.
-- `tools/prepare_release.py` — """Fail-closed draft release preparation by Jason Stys.
-- `tools/smoke_app.py` — """Exercise only a newly built or reviewed downloaded app by Jason Stys.
-- `tools/upload_release.py` — """Upload only a freshly smoke-tested native bundle to its draft by Jason Stys.
+- `tools/portable_archive.py` — Bounded Windows ZIP/POSIX tar creation, metadata inspection and fresh safe extraction.
+- `tools/prepare_release.py` — """Prepare only a new version/source-bound draft by Jason Stys.
+- `tools/release_contract.py` — Version/source coherence, exact-main prerequisites and immutable draft upload guards.
+- `tools/smoke_app.py` — """Actual extracted-executable CLI, HTTP and Chromium acceptance by Jason Stys.
+- `tools/upload_release.py` — """Upload one inspected source/version archive pair by Jason Stys.
 - `tools/verify_repo.py` — """Generate/check exact-line code and file inventories by Jason Stys.
 - `tsconfig.json` — Strict TypeScript contracts for browser, unit and end-user test code.
 - `vitest.config.ts` — /** Pure display-logic tests by Jason Stys; configuration inventory: docs/CODE_INDEX.md. */
@@ -71,7 +81,8 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `web/env.d.ts` — /** Vite static asset typing by Jason Stys; reference declarations: docs/CODE_INDEX.md. */
 - `web/index.html` — <!doctype html>
 - `web/main.ts` — /** FIELDNOTE environmental review UI by Jason Stys; source/definition/variable index: docs/CODE_INDEX.md.
+- `web/release-version.ts` — Canonical bundled application version rendered from package.json without remote lookup.
 - `web/style.css` — /* FIELDNOTE environmental field-book design by Jason Stys. Selectors/variable lines: docs/CODE_INDEX.md. */
-- `web/vite.config.ts` — /** Local production asset build by Jason Stys. Configuration variables: docs/CODE_INDEX.md. */
+- `web/vite.config.ts` — /** Canonical local asset/release build by Jason Stys; symbols: docs/CODE_INDEX.md. */
 - `docs/CODE_INDEX.md` — Generated exact-line source inventory.
 - `docs/FILE_CATALOG.md` — This generated complete file index.

@@ -24,10 +24,10 @@ The repository includes two small, attributed **public Sentinel-2 observations**
 
 ## Download a portable app
 
-Open [Releases](https://github.com/JasonStys/earth-observation-change-studio/releases/latest). Download the ZIP for Windows x64, Linux x64 or macOS Apple Silicon and its matching `.sha256` file. Verify the digest; extract the **entire** `EarthObservationStudio` folder, including `_internal` and licenses.
+Open [Releases](https://github.com/JasonStys/earth-observation-change-studio/releases/latest). Download the Windows x64 ZIP or Linux x64/macOS Apple Silicon `.tar.gz` archive and its matching `.sha256` file. Verify the digest; extract the **entire** `EarthObservationStudio` folder, including `_internal` and licenses.
 
 - Windows: open `EarthObservationStudio.exe`.
-- Linux/macOS: run `./EarthObservationStudio`. Linux ZIP extraction may require `chmod +x EarthObservationStudio`.
+- Linux/macOS: run `./EarthObservationStudio`. The `.tar.gz` preserves required internal links and executable permissions; keep the whole extracted directory.
 
 The application opens your normal browser on an ephemeral `127.0.0.1` port. Keep its console open; Ctrl+C stops it. No Python/Node installation, account, administrator access or internet connection is required for a bundle. These are **unsigned/unnotarized portable desktop applications**, not mobile installers or a public hosted multiuser service. Follow OS policy; do not bypass security warnings.
 
@@ -102,3 +102,16 @@ Every code file has a creator/responsibility header; functions/classes have cont
 Created by **Jason Stys**. [Portfolio/contact](https://github.com/JasonStys) · [Help/issues](https://github.com/JasonStys/earth-observation-change-studio/issues). MIT project source; public Sentinel data retains its own terms and attribution. **Contains modified Copernicus Sentinel data (2020)**. No agency, provider, employer or mission endorsement is implied.
 
 Contribute with a small synthetic reproduction, an independent expected answer, a regression test and updated documentation/inventory. New environmental-accuracy claims need appropriate labeled observations and independent evaluation, not just a refreshed snapshot.
+
+## Portable release identity
+
+The 1.1 release contract keeps the software version consistent across Python, npm, the
+running service and the UI. Versioned archives include `RELEASE.json` with source commit,
+platform and clean/dirty build status. Packaging tests the **freshly extracted** application,
+including its new practical workflow, from an unrelated temporary working directory.
+Windows uses ZIP; Linux/macOS use `.tar.gz` to preserve required native links and permissions.
+Published 1.0 assets remain unchanged. Check the selected release's source and version rather
+than assuming an older download contains current source improvements. See the
+[portable operation and release guide](docs/RELEASE.md).
+
+Observed local packaging checks and boundaries: [portable1.1 validation](docs/reports/PORTABLE_RELEASE_20261109.md).

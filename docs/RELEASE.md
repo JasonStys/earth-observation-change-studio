@@ -1,26 +1,74 @@
-# Release and local operations runbook
+# Portable application and release runbook
 
-Maintained by Jason Stys. This ships an offline desktop scientific-review application, not a production hosted service.
+Maintained by Jason Stys. Earth Observation Change Studio is an unsigned educational desktop application,
+not a production hosted service, signed installer or real-equipment controller.
 
-## Pre-release gates
+## Download, extract and launch
 
-1. Inspect live Actions artifacts and the available billing quota. Distinguish current bytes, billing accumulation and the separate cache allowance. Report concerns; do not delete or archive account data without fresh approval and verified private backups.
-2. Review source changes, supported input limits, scientific claims, provenance, licenses and dependencies. Regenerate the code/file inventories after formatting. Do not refresh reference results merely to silence a failure.
-3. Run README checks and actual browser QA. Inspect numerical/quality oracles, GeoTIFF/GeoJSON roundtrips, errors, opt-in review/preference behavior and mobile accessibility. Keep tests' warnings as errors; fix leaks rather than hiding warnings.
-4. Require all **eight Validation jobs** and both **CodeQL analyses** on the exact reviewed commit. Separately query open CodeQL findings; successful analysis is not proof of no findings. Unfinished jobs/account failures are not passes.
+Use the official [repository releases](https://github.com/JasonStys/earth-observation-change-studio/releases).
+Version 1.1 uses a versioned **Windows ZIP** or **Linux/macOS tar.gz**, plus an adjacent
+SHA-256 file. Older published assets remain immutable and may predate current features.
 
-## Draft build and publish
+1. Select the correct CPU/OS build and compare its SHA-256 with the sidecar. On Windows,
+   `Get-FileHash -Algorithm SHA256` computes the digest; on Linux/macOS use `sha256sum`
+   or `shasum -a 256`. A checksum identifies bytes, not publisher authenticity or safety.
+2. Extract into a new user-owned folder. Windows users extract the whole ZIP. On Linux/macOS,
+   use a tar-aware extractor such as `tar -xzf <archive.tar.gz>`; tar preserves PyInstaller's
+   relative internal links and executable permissions. Do not flatten the archive, run from
+   inside it or separate the executable from `_internal` and its license notices.
+3. Inspect `EarthObservationStudio/RELEASE.json`. Its name, version, source commit, platform,
+   CPU and clean/dirty status must agree with the chosen release. Published builds require
+   `source_dirty: false`; a local dirty development build is not exact-source release proof.
+4. Open `EarthObservationStudio.exe` on Windows, or `./EarthObservationStudio` on Linux/macOS.
+   The launcher opens your normal browser on a private ephemeral `127.0.0.1` port. Keep its
+   console open; Ctrl+C stops that process. No compiler, Python/Node setup, Docker, account,
+   administrator elevation or public host is required for the portable application.
 
-Manually dispatch **Portable release** on `main` with a fresh digits.digits.digits version. Preparation checks successful exact-SHA Validation and CodeQL runs and creates a **draft only**. Three OS jobs build the production web UI, package locked native geospatial dependencies/notices, execute actual frozen-app/SQL/geospatial/HTTP smoke checks and upload ZIP/checksum pairs directly to that draft. No Actions artifacts/caches are uploaded. Existing published assets are never overwritten.
+The targets are desktop Windows x64, Linux x64 and macOS arm64 under their tested runner
+conditions, not every OS version or a native mobile installation. Builds are unsigned and
+unnotarized. Respect OS/organization policy; never disable security controls to run them.
+Keep user-created histories and exports separate from installation folders. Local report
+histories are not encrypted account stores. Preserve original model/data/provenance limits.
 
-Download all six new draft assets into a new task-owned directory. Compare ZIP SHA-256 with the checksum file and GitHub asset-digest metadata. Inspect ZIP CRCs and required files/notices. Execute only the newly built, reviewed downloaded Windows app—not archived Actions evidence. Test public and custom local inputs, scientific/quality gates, geospatial exports, local history and all browser flows against the downloaded service. Keep synthetic test outputs/private paths outside Git.
+## Source and package acceptance
 
-Record exact source SHA, completed job links/counts, coverage/audits, download digests, actual executable/browser checks and known limitations in release notes. Publish the existing draft after verification, then confirm public release/tag/main/accepted checks align. Do not claim signing, notarization, mobile installation or environmental accuracy certification.
+Before pushing or invoking Actions, inspect storage/billing read-only and report available
+usage with its uncertainty. Artifact bytes, accrued billing usage and caches are different
+measurements. Do not delete runs, artifacts or caches without fresh explicit authorization.
+These workflows do not upload Actions artifacts or dependency caches.
 
-## Operation, teardown and rollback
+Run formatting, strict types, source inventories, independent model/native tests, Python
+branch-inclusive coverage, browser unit/journey tests and dependency audits. Do not refresh
+reference results merely to hide a failure. Preserve numerical/model contracts and user data.
 
-The server binds only `127.0.0.1`; no cloud accounts, remote fetch, AI API or telemetry. A tab can close while its server remains running: stop its own console with Ctrl+C. During development, use a task-owned port/process, check readiness, inspect the actual UI and capture an unmodified screenshot. Stop only the owned preview/test processes at teardown; do not kill broad process-name/port sets or unrelated apps.
+The portable build freezes reviewed production UI/resources, writes source/version metadata,
+creates the native archive and checksum, then inspects and extracts it into a fresh temporary
+folder. Its actual extracted executable must complete CLI/resource checks, owned health/version
+proof, real built JavaScript/CSS delivery and the new-feature Chromium/API/export journey.
+No source-server substitution, mocked successful HTTP response or unrelated existing service
+can establish native acceptance. All owned test processes and browser contexts must close.
+A package launch is not clean-machine installer certification, signing or notarization.
 
-If a release fails digest, data provenance, numerical gates or key user flows, stop distribution, identify the affected version and preserve evidence. Do not silently replace public assets. Correct source and release a new version through the same gates. Removing an extracted application after closing it does not authorize deletion of separate user exports/history. No background updater or automatic retention cleanup exists.
+## Draft-only publication
 
-Local SQL/history and review files are unencrypted and user-owned. Copy them privately for backups; never upload them to GitHub issues or public releases. Larger/untrusted inputs or public deployment require a different architecture, isolation and review. Native-library and provider changes require fresh dependency/data provenance validation, not relaxed tests.
+Dispatch **Portable release** on main with version `1.1.0` only after that exact clean source
+passes every configured Validation/CodeQL lane. Python, npm and runtime versions must agree.
+The conservative gate rejects missing, active, failed, foreign or ambiguous exact-source runs,
+and confirms current main before creating a **new draft**. Existing tags/releases are rejected;
+never retarget or reuse published assets.
+
+All three OS jobs build and test extracted native bundles. Upload requires the same draft
+source/version, complete embedded metadata, exact archive digest and no existing same-name
+asset. Release assets go directly to the draft, not Actions storage. No step publishes it.
+
+Before publication, verify all three native jobs and exact source checks, every archive's
+sidecar and GitHub asset digest, expected platform set and release notes. Download and test
+only newly built/reviewed assets, never historical archived Actions evidence. Record local
+execution separately from unavailable OSes' hosted evidence. Successful CodeQL execution
+does not by itself establish zero open security findings.
+
+## Teardown and recovery
+
+Stop only the test/preview processes you created. Do not kill unknown services, overwrite
+histories or modify OS security. Keep old whole-directory bundles for rollback. Fix published
+bugs under a fresh version; do not silently replace archives, hashes or old release tags.
