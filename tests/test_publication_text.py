@@ -72,3 +72,23 @@ def test_expansion_budget_is_active(tmp_path: Path) -> None:
     )
     with pytest.raises(ValueError, match="Unsupported reviewed"):
         public_text(path, tmp_path)
+
+
+@pytest.mark.parametrize(
+    "name,main,member",
+    [
+        ("project-guide.docx", "word/document.xml", "word/vbaProject.bin"),
+        ("project-guide.docx", "word/document.xml", "word/embeddings/inert.bin"),
+        ("validation-review.docx", "word/document.xml", "word/EmBeDdInGs/inert.bin"),
+        ("validation-evidence.xlsx", "xl/workbook.xml", "xl/embeddings/inert.bin"),
+    ],
+)
+def test_active_or_embedded_payload_is_not_reviewed_text(
+    tmp_path: Path, name: str, main: str, member: str
+) -> None:
+    """Exact approved filenames do not authorize macro or embedded document payloads."""
+    path = edition(tmp_path, name, main)
+    with ZipFile(path, "a") as package:
+        package.writestr(member, b"inert synthetic bytes")
+    with pytest.raises(ValueError, match="Unsupported"):
+        public_text(path, tmp_path)

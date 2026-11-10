@@ -29,6 +29,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/reports/benchmark.json` — Reviewed numerical metric contracts, tolerance checked across compilers/platforms.
 - `docs/reports/documentation-refresh-2026-11-09.md` — # Documentation refresh — 2026-11-09
 - `docs/reports/project-guide.docx` — Reviewed Word project guide bound to the documented source revision.
+- `docs/reports/publication-package-boundary-2026-11-10.md` — # Reviewed Office package boundary — November 10, 2026
 - `docs/reports/publications.json` — Exact Office publication identities, approved page/tab scopes and immutable source baselines.
 - `docs/reports/validation-evidence.xlsx` — Reviewed Excel workflow and test-source Tables with recalculated outcome formulas.
 - `docs/reports/validation-review.docx` — Reviewed Word validation evidence and explicit test/analysis limitations.
