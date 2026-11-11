@@ -28,11 +28,16 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Candidate context validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed numerical metric contracts, tolerance checked across compilers/platforms.
 - `docs/reports/documentation-refresh-2026-11-09.md` — # Documentation refresh — 2026-11-09
+- `docs/reports/installed-windows-2026-11-10.md` — # Installed Windows application validation — 10 November 2026
 - `docs/reports/project-guide.docx` — Reviewed Word project guide bound to the documented source revision.
 - `docs/reports/publication-package-boundary-2026-11-10.md` — # Reviewed Office package boundary — November 10, 2026
 - `docs/reports/publications.json` — Exact Office publication identities, approved page/tab scopes and immutable source baselines.
 - `docs/reports/validation-evidence.xlsx` — Reviewed Excel workflow and test-source Tables with recalculated outcome formulas.
 - `docs/reports/validation-review.docx` — Reviewed Word validation evidence and explicit test/analysis limitations.
+- `docs/reports/windows-application-guide.docx` — Individually reviewed installed-app guide with real screenshots, worked workflow, source excerpts and operating limits.
+- `docs/reports/windows-application-guide.json` — Exact illustrated-guide, screenshot and rendered-page identities plus bounded validation observations.
+- `docs/screenshots/windows-application/01-region-context.png` — Binary screenshot asset from local application validation
+- `docs/screenshots/windows-application/02-all-masked.png` — Binary screenshot asset from local application validation
 - `eostudio/__init__.py` — """Offline environmental spectral-change evidence by Jason Stys; no operational surveillance."""
 - `eostudio/__main__.py` — """Local application launcher and explicit evidence exports by Jason Stys.
 - `eostudio/context.py` — """Candidate-region four-neighbor context by Jason Stys.

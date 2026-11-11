@@ -26,6 +26,7 @@ def edition(root: Path, name: str, main: str, text: bytes = b"<document>public</
 @pytest.mark.parametrize(
     "name,main",
     [
+        ("windows-application-guide.docx", "word/document.xml"),
         ("project-guide.docx", "word/document.xml"),
         ("validation-review.docx", "word/document.xml"),
         ("validation-evidence.xlsx", "xl/workbook.xml"),
