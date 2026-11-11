@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "repository": "earth-observation-change-studio",
+  "runtimeVersion": "1.1.0",
+  "runtimeSource": "e63d4d111512a36d1ffb19a04059b4d8965ac5d2",
+  "createdAt": "2026-11-10T23:51:09.156Z",
+  "author": "Jason Stys",
+  "document": "windows-application-guide.docx",
+  "sha256": "4eee7e193067d123b1ef2a34811afe043eb4a4437ec2801620a377558c3c1c5a",
+  "screenshots": [
+    {
+      "file": "01-region-context.png",
+      "sha256": "27caa9b1a3d06d638b6845c1598553d7816515b90894353e90c5f524f07f4e77",
+      "width": 1326,
+      "height": 679,
+      "caption": "Actual installed application showing vegetation-loss region context. Captured during the accepted native user journey with prepared synthetic inputs."
+    },
+    {
+      "file": "02-all-masked.png",
+      "sha256": "0cb125df016b723076af94cf08c585db95219a5845748a682c14bb935e857cde",
+      "width": 1326,
+      "height": 443,
+      "caption": "Actual installed application showing all pixels masked and unknown. Captured during the accepted native user journey with prepared synthetic inputs."
+    }
+  ],
+  "snippets": [
+    {
+      "file": "eostudio/context.py",
+      "first": 25,
+      "last": 51,
+      "sha256": "baa480b4098e531b2f88cf9b2c96d0a67d0cca5de46e1a1e29a8fe7f5630e8ad",
+      "url": "https://github.com/JasonStys/earth-observation-change-studio/blob/e63d4d111512a36d1ffb19a04059b4d8965ac5d2/eostudio/context.py#L25"
+    }
+  ],
+  "observedTests": [
+    {
+      "name": "Published package",
+      "observed": "Exact public release, provider/sidecar hashes and installed resources verified; installed bytes unchanged.",
+      "result": "Passed"
+    },
+    {
+      "name": "Actual native core",
+      "observed": "The existing packaged CLI/API and native feature acceptance helper passed on the installed executable.",
+      "result": "Passed"
+    },
+    {
+      "name": "Scenario evidence",
+      "observed": "The synthetic region contained 192 pixels with 56 distinct fringe neighbors. GeoJSON context matched JSON; all-masked input produced no inferred regions.",
+      "result": "Passed"
+    },
+    {
+      "name": "UI and cleanup",
+      "observed": "Actual compiled-application browser journey passed. Both images were individually inspected; cleanup left no owned child process.",
+      "result": "Passed"
+    }
+  ],
+  "visualReview": {
+    "approved": true,
+    "pageCount": 4,
+    "reviewedAt": "2026-11-11T01:38:52.988732+00:00",
+    "reviewers": [
+      "audit_apps"
+    ],
+    "method": "Every page individually viewed at original resolution; unchanged previously reviewed pages retained only after exact SHA-256 match.",
+    "pageSHA256": {
+      "1": "8676e3a6eae84fba5aaab0284c116c0080a063d87afecb551e1d9e8030d82853",
+      "2": "6531cfcbd6802069eabe573abed582d1b8abced972805e0f410a6369c8c2f4aa",
+      "3": "cf76f864b3522542d92d28ead46bfee559f8bf63876b30c2def85d72209868de",
+      "4": "5e69bcf83b3dd91ceffab806d9cec0ff2ddb535ba42d7959df50bd4113266456"
+    },
+    "ooxmlSchema": "passed",
+    "issues": []
+  }
+}

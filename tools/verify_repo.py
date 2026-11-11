@@ -37,6 +37,8 @@ SKIP = {
 }
 SOURCE_SUFFIXES = {".py", ".ts", ".mjs", ".css", ".html", ".sql", ".cpp", ".hpp"}
 FILE_PURPOSES = {
+    "docs/reports/windows-application-guide.docx": "Individually reviewed installed-app guide with real screenshots, worked workflow, source excerpts and operating limits.",
+    "docs/reports/windows-application-guide.json": "Exact illustrated-guide, screenshot and rendered-page identities plus bounded validation observations.",
     "docs/reports/project-guide.docx": "Reviewed Word project guide bound to the documented source revision.",
     "docs/reports/validation-review.docx": "Reviewed Word validation evidence and explicit test/analysis limitations.",
     "docs/reports/validation-evidence.xlsx": "Reviewed Excel workflow and test-source Tables with recalculated outcome formulas.",
